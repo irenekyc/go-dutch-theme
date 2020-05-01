@@ -1,0 +1,54 @@
+@mixin CHANGEFLEX{
+    .flex-box{
+        flex-direction: column;
+        div{
+            width:100%;
+        }
+    .hero-text{
+        padding: 2rem;
+    }
+    }
+}
+
+@mixin CHANGEGRID{
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+@media (max-width:769px){
+    @include CHANGEFLEX;
+    body{
+        text-align: center;
+    }
+}
+
+@media (min-width:768px){
+    .grid{
+        display:grid;
+        grid-template-areas: 'feature feature'
+        'feature feature';
+    }
+    .testimonies-item{
+        width:50%;
+    }
+}
+
+@media (max-width:450px){
+    .wrapper{
+        padding: 0 4%;
+    }
+    nav ul{
+        width:50%;
+    }
+    .large{
+        font-size:2rem;
+    }
+    .x-large{
+        font-size:2.5rem;
+    }
+    @include CHANGEGRID;
+}

@@ -1,0 +1,72 @@
+//Layout
+
+.wrapper{
+    padding: 0 12%;
+}
+
+@for $i from 1 through 10 {
+    .py-#{$i} { padding-top: 1rem* $i; padding-bottom: 1rem*$i}
+}
+
+@for $i from 1 through 10 {
+    .p-#{$i} { padding: 1rem* $i; }
+}
+@for $i from 1 through 10 {
+    .my-#{$i} { margin-top: 1rem* $i; margin-bottom: 1rem*$i}
+}
+
+@for $i from 1 through 10 {
+    .m-#{$i} { margin: 1rem* $i; }
+}
+.flex-box{
+    display:flex;
+    justify-content: space-between;
+}
+
+
+@mixin align-center{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+//TEXT
+.lead{
+    font-size:1.5rem;
+    letter-spacing: 2px;
+}
+.heading-text{
+    color: $primary-blue;
+}
+
+.large{
+    font-size:3rem;
+}
+
+.x-large{
+    font-size:4rem;
+}
+
+.text-center{
+    text-align:center;
+}
+
+//Button
+
+.btn{
+    cursor: pointer;
+    padding:12px 40px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    &.btn-primary-red{
+        background: $primary-red;
+        color:white;
+
+        &:hover{
+            filter: brightness(120%)
+        }
+
+    }
+}
